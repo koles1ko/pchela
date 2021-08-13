@@ -1,26 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<header-main :phone="phone" @swapSeason="rrrr"></header-main>
+	<component :is="'main-page-' + season"></component>
+	<footer-main :phone="phone"
+				 :address="address"
+				 :workTime="workTime" ></footer-main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import HeaderMain from './components/HeaderMain.vue'
+import MainPageSummer from "./components/MainPageSummer";
+import MainPageWinter from "./components/MainPageWinter";
+import FooterMain from "./components/FooterMain";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: {
+		HeaderMain, MainPageSummer, MainPageWinter, FooterMain
+	},
+	data() {
+		return {
+			isSummer: true,
+			season: 'winter',
+			phone: '89094115001',
+			address: 'г. Таганрог, ул.Дзержинского, 140',
+			workTime: 'Работаем ежедневно с 9:00 до 20:00\n'
+		}
+	},
+	methods: {
+		rrrr(data) {
+			this.season = data
+			console.log(data)
+		}
+	}
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

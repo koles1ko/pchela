@@ -1,0 +1,45 @@
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+	@return $pixels / $context * 1rem;
+}
+
+@mixin size($width,$height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {
+		@content
+	}
+	:-moz-placeholder {
+		@content
+	}
+	::-moz-placeholder {
+		@content
+	}
+	:-ms-input-placeholder {
+		@content
+	}
+}
+
+@mixin flex($height: auto) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: $height;
+}
+
+@mixin font-param($size, $weight: 400, $style: normal) {
+	font: {
+		size: $size + px;
+		weight: $weight;
+		style: $style;
+	}
+}
