@@ -171,7 +171,7 @@
 			</div>
 			<div class="reviews__body flex-body">
 				<div class="reviews__slider">
-					<reviews-slider :reviews="reviews"></reviews-slider>
+					<reviews-slider-summer :reviews="reviewsSummer"></reviews-slider-summer>
 				</div>
 				<div class="reviews__picture">
 					<img src="../assets/images/reviews-man.png" alt="work-man">
@@ -192,7 +192,7 @@
 				<div class="title-decor"></div>
 			</div>
 			<div class="works__items">
-				<gallery-work></gallery-work>
+				<gallery-work-summer></gallery-work-summer>
 			</div>
 		</div>
 
@@ -203,13 +203,13 @@
 </template>
 
 <script>
-import ReviewsSlider from "@/components/ReviewsSlider";
-import GalleryWork from "@/components/GalleryWork";
+import ReviewsSliderSummer from "@/components/ReviewsSliderSummer";
+import GalleryWorkSummer from "@/components/GalleryWorkSummer";
 
 ;
 export default {
 	components: {
-		ReviewsSlider, GalleryWork
+		ReviewsSliderSummer, GalleryWorkSummer
 	},
 	name: "MainPage",
 	data() {
@@ -362,7 +362,7 @@ export default {
 					id: 4,
 				},
 			],
-			reviews: [
+			reviewsSummer: [
 				{
 					name: 'Оксана',
 					text: 'Устранили протечку кондиционера. С собой был весь необходимый инструмент, вежливые, пунктуальные. Не были знакомы с моей моделью кондиционера. Ремонт обошелся в полторы тысячи.',

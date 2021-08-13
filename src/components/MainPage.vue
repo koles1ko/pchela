@@ -197,8 +197,8 @@
 </template>
 
 <script>
-import ReviewsSlider from "@/components/ReviewsSlider";
-import GalleryWork from "@/components/GalleryWork";;
+import ReviewsSlider from "@/components/ReviewsSliderSummer";
+import GalleryWork from "@/components/GalleryWorkSummer";;
 export default {
 	components: {
 		ReviewsSlider, GalleryWork

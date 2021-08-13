@@ -7,7 +7,6 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import HeaderMain from './components/HeaderMain.vue'
 import MainPageSummer from "./components/MainPageSummer";
 import MainPageWinter from "./components/MainPageWinter";

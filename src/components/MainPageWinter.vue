@@ -39,7 +39,7 @@
 			<div class="container">
 				<div class="intro__content-inner">
 					<div class="intro__text">
-						jhhbfhsdfuydsfuybvfvfdhsb
+						Ремонт и обслуживание холодильников от
 						<span class="old-price"> 1000 </span>
 						<span class="color-danger"> 500₽</span>
 						<div class="intro__today"> В день обращения, любые производители, запчасти в наличии</div>
@@ -53,7 +53,7 @@
 			<div class="about__body flex-body">
 				<div class="about__picture">
 					<div class="about__picture-decor"></div>
-					<img src="../assets/images/about.jpg" alt="about">
+					<img src="../assets/images/about-winter.jpg" alt="about">
 				</div>
 				<div class="about__description">
 					<div class="about__text">
@@ -92,8 +92,7 @@
 			<div class="services__items flex-body">
 				<div class="services__item" v-for="item in servicesList">
 					<div class="services__picture">
-						<!--						<img :src="require('../assets/images/services/service-2.jpg')" :alt="item.name">-->
-						<img :src="require('../assets/images/services/service-'+item.picturePath+'.jpg')"
+						<img :src="require('../assets/images/services/winter-'+item.picturePath+'.jpg')"
 							 :alt="item.name">
 					</div>
 					<div class="services__info flex-body">
@@ -171,7 +170,7 @@
 			</div>
 			<div class="reviews__body flex-body">
 				<div class="reviews__slider">
-					<reviews-slider :reviews="reviews"></reviews-slider>
+					<reviews-slider-summer :reviews="reviewsWinter"></reviews-slider-summer>
 				</div>
 				<div class="reviews__picture">
 					<img src="../assets/images/reviews-man.png" alt="work-man">
@@ -192,7 +191,7 @@
 				<div class="title-decor"></div>
 			</div>
 			<div class="works__items">
-				<gallery-work></gallery-work>
+				<gallery-work-winter></gallery-work-winter>
 			</div>
 		</div>
 
@@ -203,13 +202,13 @@
 </template>
 
 <script>
-import ReviewsSlider from "@/components/ReviewsSlider";
-import GalleryWork from "@/components/GalleryWork";
+import ReviewsSliderSummer from "@/components/ReviewsSliderSummer";
+import GalleryWorkWinter from "@/components/GalleryWorkWinter";
 
 ;
 export default {
 	components: {
-		ReviewsSlider, GalleryWork
+		ReviewsSliderSummer, GalleryWorkWinter
 	},
 	name: "MainPage",
 	data() {
@@ -362,24 +361,24 @@ export default {
 					id: 4,
 				},
 			],
-			reviews: [
+			reviewsWinter: [
 				{
-					name: 'Оксана',
+					name: 'Оксана123',
 					text: 'Устранили протечку кондиционера. С собой был весь необходимый инструмент, вежливые, пунктуальные. Не были знакомы с моей моделью кондиционера. Ремонт обошелся в полторы тысячи.',
 					id: 1
 				},
 				{
-					name: 'Елена Прутикова',
+					name: 'Елена Прутикова123',
 					text: 'Профессионально, быстро качественно.',
 					id: 2
 				},
 				{
-					name: 'Антон Евстафьев',
+					name: 'Антон Евстафьев123',
 					text: 'Решили проблему с кондиционерами за 3 часа, пока другие мастера не могли решить её уже 2 недели. Стоимость адекватная (ниже прописанного мною максимума). Дали гарантию на работы. В принципе было приятно сотрудничать, мастера рекомендую.',
 					id: 3
 				},
 				{
-					name: 'Ирина Бурдакова',
+					name: 'Ирина Бурдакова123',
 					text: 'Работой мастера осталась довольна! Все сделал отлично, думаю будем обращаться ещё и посоветую друзьям!',
 					id: 4
 				}
