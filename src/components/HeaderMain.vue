@@ -65,9 +65,9 @@
 					<div class="header__consult" @click="showModal">
 						Заказать консультацию
 					</div>
-					<div class="header__season" @click="changeSeason">
-						{{ season }}
-					</div>
+<!--					<div class="header__season" @click="changeSeason">-->
+<!--						{{ season }}-->
+<!--					</div>-->
 				</div>
 			</div>
 		</div>

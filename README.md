@@ -1,19 +1,17 @@
-# pchelka
+### pchelka
 
-## Project setup
-```
-npm install
-```
+Данный проект создавался для человека который занимается ремонтом охладительной (кондиционеры, холодильники) и
+нагревательной (котлы) техники. Проект был реализован в мае 2021 года и являлся первым проектом на Vue. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Были реализованы такие компоненты как:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- модальные окна
+- попап-галерея картинок
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+На стороне сервера была настроена отправка данных на почту и в телеграм
+
+Проект распологался по адресу [holodtgn.ru](https://holodtgn.ru/)
+
+Код был собран в бандл и просто залит на хостинг
+
+
